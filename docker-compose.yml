@@ -1,6 +1,8 @@
 version: '3.9'
 services:
-  next-updater:
+  immich-updater:
     env_file:
       - '.env'
     build: .
+    volumes:
+      - ./src/scan.sh:/usr/local/bin/scan.sh
